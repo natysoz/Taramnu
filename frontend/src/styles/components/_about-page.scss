@@ -1,0 +1,24 @@
+.section-header {
+    @include flexy(row,center,center);
+    @include font($text,32px,500,Roboto);
+    background-image: url("../assets/img/header/about.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+}
+.who-weare {
+    @include flexy(row,center,center);
+    *{
+        margin: 10px;
+        max-width: 1400px;
+    }
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    // flex-direction: row;
+    max-width: 1480px;
+    margin: 0 auto;
+    p{@include font($text-dark,18px,500,Roboto)}
+    div{font-size:32px;}
+}

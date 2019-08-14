@@ -1,0 +1,39 @@
+header {
+  height: rem(550px);
+  width: 100%;
+  background-image: url("../../assets/img/header/header.jpg");
+  background-size: cover;
+  background-position: right;
+  @include breakpoint(xs){
+    height: rem(350px);
+    background-size: unset;
+    background-position: left;
+  }
+}
+
+.header-title {
+  margin: 0 auto;
+  width: 75%;
+  padding-top: 70px;
+  text-align: left;
+  h2{
+    font-weight: 400;
+   
+  }
+  @include breakpoint(xs) {
+    text-align: center;
+    padding-top: rem(60px);
+    width: 90%;
+  }
+
+}
+
+.main-title {
+    font-size: rem(40px);
+    color: $text;
+  @include breakpoint(xs) {
+    font-size: rem(24px);
+    @include margin-center;
+    width: 100%;
+  }
+}

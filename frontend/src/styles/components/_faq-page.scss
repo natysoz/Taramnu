@@ -1,0 +1,36 @@
+.page-container {
+  @include container(1200px);
+}
+.title{h1{
+  @include full-center;
+  padding-top: rem(35px);
+  font-size: rem(35px);
+}}
+.row-last{
+  font-size: rem(28px);
+  @include full-center;
+  flex-direction: column;
+  img{
+    width: 100%;
+  }
+}
+.row {
+  @include breakpoint(xs){
+    flex-direction: column;
+  }
+  @include flexy(row,space-between,center);
+  h2 {
+    @include font($text-dark, 40px, 500, Roboto);
+    font-size: rem(30px);
+  }
+  img {
+    width: auto;
+    height:rem(250px);
+    @include breakpoint(xs){
+      height: rem(200px);
+    }
+  }
+  *{
+    padding: rem(10px);
+  }
+}

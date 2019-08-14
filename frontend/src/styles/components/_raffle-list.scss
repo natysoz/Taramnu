@@ -1,0 +1,17 @@
+.raffle-list{
+  display: grid;
+  width: 100%;
+  padding-top: rem(10px);
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill,350px);
+
+  *{
+    margin: 10px auto;
+    transition: 0.15s ease-out;
+  }
+  @include breakpoint(xs){
+    margin: 0 auto;
+    transition: 0.15s ease-out;
+  }
+}
+

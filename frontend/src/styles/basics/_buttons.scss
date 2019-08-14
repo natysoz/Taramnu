@@ -1,0 +1,20 @@
+ @mixin round-button($color,$width,$height,$radius){
+  @include full-center;
+  width: rem($width);
+  height: rem($height);
+  border-radius:$radius;
+  color: $color;
+  background-color:$brand-color;
+}
+
+
+
+ @mixin button($size,$color,$width,$height,$radius){
+  @include full-center;
+  font-size:$size;
+  width: rem($width);
+  height: rem($height);
+  border-radius:$radius;
+  color: $color;
+  background-color:$brand-color;
+ }

@@ -1,0 +1,164 @@
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 60px;
+  cursor: pointer;
+}
+
+.form {
+
+  @include flexCenter(column);
+
+}
+
+.box {
+  @include flexCenter(row);
+
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.box select {
+  padding: 2px;
+  font-size: 14px;
+  appearance: button;
+  width: 10rem;
+}
+
+.select-cont {
+  margin-left: 5px;
+}
+
+.box .fa-chevron-down {
+  position: relative;
+  right: 20px;
+  top: 2px;
+  text-align: center;
+  font-size: 18px;
+  color: $brand-color;
+  pointer-events: none;
+}
+
+.box select option {
+  background-color: $brand-color;
+}
+
+
+/* form starting stylings ------------------------------- */
+.group {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+input {
+  font-size: 14px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: rgb(49, 172, 125);
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 300px;
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: $brand-color;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+
+
+.submit {
+  background-color: $brand-color;
+  -moz-border-radius: 28px;
+  -webkit-border-radius: 28px;
+  border-radius: 28px;
+  border: 1px solid $brand-color;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px $brand-color;
+}
+
+.submit:hover {
+  background-color: #5cbf2a;
+}
+
+.submit:active {
+  position: relative;
+  top: 1px;
+}

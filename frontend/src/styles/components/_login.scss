@@ -1,0 +1,134 @@
+.login-container{
+    @include full-center;
+    @include container(1480px);
+    @include margin-center;
+    @include flex-col;
+    text-align: center;
+    padding-top: rem(20px);
+}
+.buttons-container{
+    h2{
+        font-weight: 500;
+    }
+}
+.head-container{
+    @include flex-col;
+    justify-content: space-evenly;
+    height: rem(350px);
+
+    h1{
+        font-size: rem(50px);
+    }
+    h2{
+        font-weight: 300;
+    }
+    i{
+        font-size: rem(50px);
+        color: $brand-color;
+    }
+    button{
+        padding: 2px;
+        *{
+            padding:rem(10px);
+        }
+        @include margin-center;
+        @include button(16px,white,280px,50px,0px);
+        border: none;
+        i{
+            font-size: rem(25px);
+            color: white;
+        }
+    }
+}
+
+.saperator{
+    @include flex-row;
+    @include full-center;
+    width: 100%;
+    hr{
+        width: 100px;
+        background-color: red;
+    }
+}
+
+
+.login-area{
+    @include full-center;
+    @include container(1480px);
+    @include margin-center;
+    height: rem(200px);
+    input{
+        text-align: left;
+        vertical-align: center;
+        padding-left: rem(10px);
+        width: rem(280px);
+        height: rem(50px);
+    }
+    form{
+        div{
+            margin: rem(10px);
+        }
+    }
+    .forms{
+        height: rem(200px);
+        form{
+            @include flex-col;
+            *{
+                margin-bottom: 2px;
+            }
+        }
+        button{
+            cursor: pointer;
+            padding: 2px;
+            *{
+                padding:rem(10px);
+            }
+            @include margin-center;
+            @include button(16px,white,280px,50px,0px);
+            border: none;
+            i{
+                font-size: rem(25px);
+                color: white;
+            }
+        }
+    }
+}
+
+.create{
+    @include font($brand-color,22px,300,Roboto);
+    cursor: pointer;
+}
+
+
+.connected{
+    @include full-center;
+    @include flex-col;
+
+    .logged{
+        @include flex-col;
+        justify-content: space-between;
+        font-size: rem(22px);
+        height: 100px;
+        button{
+            cursor: pointer;
+            padding: 2px;
+            *{
+                padding:rem(10px);
+            }
+            @include margin-center;
+            @include button(16px,white,280px,50px,0px);
+            border: none;
+            i{
+                font-size: rem(25px);
+                color: white;
+            }
+        }
+        *{
+            margin: 10px;
+            padding: 10px;
+        }
+    }
+
+}
+
+

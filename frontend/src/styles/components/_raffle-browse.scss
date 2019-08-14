@@ -1,0 +1,5 @@
+.browsing{
+  @include margin-center;
+  @include flex-col;
+  @include container;
+}

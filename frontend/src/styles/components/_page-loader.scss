@@ -1,0 +1,33 @@
+$width:80px;
+.ball-loader{
+  width: $width + 0px;
+  height: ($width / 3) - 10px;
+  display: flex;
+  margin:  20px auto;
+  justify-content: center;
+  transform: translateX(0%) translateY(0%);
+}
+.ball-loader-ball{
+  will-change: transform;
+  height:($width / 3) - 10px;
+  width: ($width / 3) - 10px;
+  border-radius: 50%;
+  background-color: $brand-color;
+  position: absolute;
+  animation: grow 1s ease-in-out infinite alternate;
+
+
+  &.ball1{
+    left:0;
+    transform-origin: 100% 50%;
+  }
+  &.ball2{
+    left:50%;
+    transform: translateX(-50%) scale(1);
+    animation-delay: 0.33s;
+  }
+  &.ball3{
+    right:0;
+    animation-delay: 0.66s;
+  }
+}

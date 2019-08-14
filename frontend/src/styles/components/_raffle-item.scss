@@ -1,0 +1,323 @@
+$bar-size: 25px;
+
+.separator{
+    height: 1px;
+    width: 99%;
+    background-color: #d0d0d0;
+}
+
+.raffle-ended {
+  @include flex-col;
+  padding: rem(20px);
+  justify-content: space-between;
+
+  @include breakpoint(xs){
+    height: 315px;
+    text-align: center;
+  }
+  @include breakpoint(lg){height: 385px;}
+
+  .winner-info{
+    *{padding-top: 10px}
+    .item-title{
+      @include breakpoint(xs){text-align: center;}
+      @include breakpoint(lg){text-align: left;}
+    }
+  }
+
+  h2 {
+    text-align: left;
+    @include breakpoint(xs){
+      text-align: center;
+    }
+    color: $accent-color;
+  }
+
+  h3 {
+    @include font($text-dark, 32px, 500, Roboto);
+    @include flexy(row, flex-stat, center);
+    @include breakpoint(xs){
+      @include flexy(row, center, center);
+      @include font($text-dark, 22px, 500, Roboto);
+    }
+    text-align: left;
+    width: 100%;
+
+    * {
+      padding: 5px
+    }
+  }
+
+  h4 {
+    font-size: rem(28px);
+    span {
+      color: $brand-color;
+    }
+  }
+
+  .total-donations {
+    align-items: center;
+    width: 100%;
+    font-size: rem(32px);
+
+    .donated {
+      @include flexy(row, center, center);
+      @include font($brand-color, 32px, 500, Roboto);
+      @include breakpoint(xs) {
+        @include font($brand-color, 26px, 500, Roboto);
+      }
+        text-align: left;
+
+      img {
+        @include breakpoint(xs) {
+          width: 150px;
+          height: 80px;
+        }
+        width: 280px;
+        height: 160px;
+      }
+    }
+
+    i {
+      padding: rem(32px);
+      font-size: rem(80px);
+      @include breakpoint(xs) {
+        padding: rem(20px);
+        font-size: rem(40px);
+      }
+    }
+  }
+
+}
+
+.raffle-container {
+  @include container;
+  @include flex-col;
+  padding-top: rem(10px);
+}
+
+.raffle-header {
+  @include flex-row;
+  font-size: rem(18px);
+  padding: rem(20px);
+  margin-bottom: rem(10px);
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  @include breakpoint(xs) {
+    border: none;
+    margin-bottom: 0;
+    padding: rem(2px);
+  }
+}
+
+.raffle-logos {
+  @include full-center;
+  width: 100%;
+  justify-content: space-evenly;
+
+  @include breakpoint(xs) {
+    justify-content: space-between;
+  }
+
+  .fas {
+    font-size: rem(32px);
+    color: #ff5a5f;
+    @include breakpoint(xs) {
+      font-size: rem(26px);
+    }
+  }
+
+  img {
+    width: auto;
+    height: 125px;
+    @include breakpoint(xs) {
+      width: 100%;
+      height: auto;
+    }
+    min-width: 120px;
+  }
+
+  * {
+    @include full-center;
+  }
+}
+
+.raffle-info {
+  @include margin-center;
+  @include flexy(row, center, center);
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  @include breakpoint(xs) {
+    height: unset;
+  }
+}
+
+.raffle-division {
+  height: 385px;
+  @include full-center;
+  flex-wrap: wrap;
+
+  @include breakpoint(md) {
+    width: 50%;
+  }
+  @include breakpoint(lg) {
+    width: 50%;
+    min-width: 320px;
+    padding: 20px;
+  }
+  @include breakpoint(xs) {
+    width: 100%;
+    height: auto;
+
+  }
+}
+
+.my-slider {
+  @include breakpoint(xs) {
+    height: 265px !important;
+  }
+
+  .slider-item {
+    position: unset;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      @include breakpoint(lg) {
+        object-fit: cover;
+        width: 100%;
+      }
+      @include breakpoint(xs) {
+      }
+    }
+  }
+}
+
+.raffle-details {
+  @include flex-col;
+  padding: rem(20px);
+  justify-content: space-between;
+  height: 385px;
+  width: 100%;
+}
+
+.item-title {
+  font-size: rem(28px);
+  order: 1;
+  @include breakpoint(xs) {
+    font-size: rem(24px);
+  }
+}
+
+.item-subtitle {
+  font-size: rem(22px);
+  text-align: left;
+  order: 2;
+  @include breakpoint(xs) {
+    order: 4;
+  }
+
+  * {
+    padding: 5px;
+  }
+}
+
+.tickets-info {
+  order: 3;
+  @include flex-row;
+  text-align: left;
+  justify-content: flex-start;
+  width: 100%;
+  @include breakpoint(xs) {
+    order: 3;
+  }
+
+  .ticket-left {
+    font-size: rem(22px);
+    color: #ff4242;
+    width: 100%;
+    text-align: left;
+  }
+
+  .members {
+    font-size: rem(22px);
+    display: flex;
+
+    .fa-users {
+      margin-left: 4px;
+    }
+  }
+}
+
+.item-desc {
+  text-align: left;
+  max-width: 80%;
+
+  * {
+    padding: 10px;
+  }
+}
+
+.progress {
+  width: 100%;
+  background-color: #efefef;
+  height: rem($bar-size);
+  order: 5;
+  @include breakpoint(xs) {
+    order: 2;
+  }
+}
+
+.finished {
+  width: 37%;
+  height: rem($bar-size);
+  transition: all 0.5s ease-out;
+}
+
+.raffle-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  top: 20px;
+  font-weight: bold;
+
+  div {
+    margin-right: 3px;
+  }
+}
+
+.raffle-actions {
+  @include margin-center;
+  @include flexy(row, center, center);
+  order: 6;
+
+  button {
+    width: 170px;
+    height: 70px;
+    align-items: center;
+    border: none;
+    background-color: $brand-color;
+    color: white;
+    font-size: rem(18px);
+    transition: all 0.10s linear;
+    cursor: pointer;
+    @include breakpoint(xs) {
+      font-size: rem(20px);
+    }
+  }
+}
+
+.desc-container {
+  font-size: rem(22px);
+  @include breakpoint(xs) {
+    font-size: rem(16px);
+  }
+  padding: 0 20px 20px;
+  margin: 0 20px 20px;
+}
+
+
+

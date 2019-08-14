@@ -1,0 +1,11 @@
+.slider-gallery {
+  @include flex-row;
+  @include margin-center;
+  justify-content: center;
+  width: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  *{
+    margin: rem(10px);
+  }
+}

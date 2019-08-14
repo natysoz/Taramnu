@@ -1,0 +1,39 @@
+.mobile-menu {
+  animation: slide-in 0.3s ease;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  position: fixed;
+  right: 0;
+  background-color: $text;
+
+  .menu-padding {
+    @include flex-col;
+    @include flex-center;
+    padding: rem(50px);
+    height: 85%;
+    justify-content: space-around;
+    a{
+      @include menu-item($text-dark,20px,none);
+      text-align: left;
+    }
+  }
+}
+
+.menu-logo{
+  i{
+    font-size: rem(105px);
+    color: $brand-color;
+  }
+}
+
+.close {
+  position: fixed;
+  font-size: rem(40px);
+  right: 15px;
+  top: 15px;
+  i {
+    color: $brand-color;
+  }
+}
+

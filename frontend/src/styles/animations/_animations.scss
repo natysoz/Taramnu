@@ -1,0 +1,44 @@
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes grow {
+  to {
+    transform: translateX(-50%) scale(0);
+  }
+}
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: rgb(49, 172, 125);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: rgb(49, 172, 125);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: rgb(49, 172, 125);
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}

@@ -1,0 +1,17 @@
+.page-container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint(xs) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .slider-gallery {
+      @include flex-row;
+      justify-content: flex-start;
+      width: auto;
+      overflow-x: scroll;
+      overflow-y: scroll;
+    }
+  }
+}

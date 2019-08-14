@@ -1,0 +1,32 @@
+
+.img-para{
+  order:1;
+}
+.why-para{
+  order:2;
+}
+.para{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.para p{
+  color: black;
+  margin: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+}
+.why-container{
+  display: flex;
+  width: 100%;
+  // flex-direction: row;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  img{
+    width: 320px;
+    height: auto;
+  }
+}

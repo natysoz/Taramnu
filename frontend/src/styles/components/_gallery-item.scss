@@ -1,0 +1,150 @@
+.card-container {
+  @include margin-center;
+  @include flex-col;
+  border: 1px solid #e6e6e6;
+  justify-content: space-between;
+  max-width: rem(320px);
+  height: rem(485px);
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    .bar {
+      @include full-center;
+      display: flex;
+      position: relative;
+      width: 100%;
+      height: rem(32px);
+      background-color: rgba(0, 0, 0, 0.06);
+      color: $text;
+      z-index: 20;
+    }
+  }
+
+  .separator {
+    @include margin-center;
+    height: 1px;
+    width: 92%;
+    background-color: #d0d0d0;
+  }
+}
+
+.title-end{
+  font-size: rem(20px);
+}
+
+.tringle{
+  @include rg($brand-color);
+  position: absolute;
+  color: $text;
+  width: rem(133px);
+  height: rem(35px);
+  font-size: rem(20px);
+  text-align: center;
+  right: 195px;
+  line-height: 35px;
+  top: 15px;
+  z-index: 99;
+  transform: rotate(-45deg);
+}
+
+.raffle-image {
+  @include margin-center;
+  max-width: rem(320px);
+  width: rem(320px);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.raffle-head {
+  @include flex;
+  @include flexy(row, space-between, center);
+  * {
+    padding: rem(5px)
+  }
+}
+
+.raffle-info {
+  @include flex;
+  @include flexy(column, space-around, center);
+  @include font($text-dark, 32px, 500, Roboto);
+  height: rem(200px);
+  padding: rem(8px);
+  font-size: rem(24px);
+  text-align: center;
+  h2 {
+    @include font($accent-color, 20px, 500, Roboto);
+  }
+  h3{
+    @include font($text-dark, 17px, 500, Roboto);
+    @include full-center;
+    width: 100%;
+    *{padding: 5px}
+  }
+  h4{
+    span{
+    @include font($brand-color,20px,800,Roboto);
+    }
+  }
+  .rotate{
+    i{
+      transform: rotate(-45deg);
+      color: $brand-color;
+    }
+  }
+
+  button {
+    background-color: $brand-color;
+    margin: 0 auto;
+    border: none;
+    color: $text;
+    font-size: rem(20px);
+    height: 50px;
+    width: 165px;
+    transition: all 0.15s ease-in;
+
+    &:hover {
+      cursor: pointer;
+      font-size: rem(22px);
+    }
+  }
+}
+
+
+.ticket-left{
+  @include flex-row;
+  font-weight: 300;
+  font-size: rem(20px);
+  *{padding-left: rem(5px)}
+}
+
+.brand {
+  @include flexy(row, space-between, center);
+  width: 100%;
+
+  img {
+    width: 100px;
+    height: 40px;
+  }
+
+  i {
+    color: #ff5a5f;
+    font-size: rem(24px);
+  }
+}
+
+.total-donations{
+  @include flexy(row,space-around,center);
+  align-items: baseline;
+  width: 100%;
+  font-size: rem(19px);
+  .donated{
+    color: $brand-color;
+  }
+  i{
+    padding: 3px;
+    font-size: 22px;
+  }
+}
+

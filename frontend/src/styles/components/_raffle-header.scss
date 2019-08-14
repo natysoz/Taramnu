@@ -1,0 +1,10 @@
+
+h2{
+        @include font($text,32px,500,Roboto);
+}
+.section-header{
+    @include flexy(row,center,center);
+    background-image: url("../../assets/img/header/header_buyzone.jpg");
+    height:rem(230px);
+    width: 100%;
+}

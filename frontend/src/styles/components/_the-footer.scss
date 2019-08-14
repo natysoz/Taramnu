@@ -1,0 +1,56 @@
+.page-container{
+  @include container;
+}
+.safety-container{
+  @include full-center;
+  width: 100%;
+}
+
+.payments{
+  @include flex-center;
+  *{
+    padding: rem(5px)
+  }
+}
+
+.payment-pp{
+  justify-self: baseline;
+  font-size: rem(40px);
+}
+
+.social-container{
+  @include full-center;
+  width: 100%;
+  *{
+    margin: rem(10px);
+  }
+}
+
+
+.round-button{
+  @include full-center;
+  @include round-button(white,60px,60px,0);
+  &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+  }
+}
+
+
+
+.the-social{
+  @include flexy(column,center,unset);
+  font-size: rem(32px);
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
+  height: 150px;
+  div{
+    text-align: center;
+    margin-top: 20px;
+  }
+  span{
+    margin: 10px;
+    color: $brand-color;
+  }
+}
