@@ -1,5 +1,7 @@
 # Taramnu - B2C Contribute Platform
 
+https://taramnu.herokuapp.com/
+
 In this project i create Both Front and Back ends ,using NodeJs , Scss ,VueJs , Vuex.
 I Design the whole idea and create Mocks in Avocode before i start build up the app in vueJs.
 
