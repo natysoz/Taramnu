@@ -21,7 +21,7 @@
         "express-session": "^1.16.2",
         "mongodb": "^3.2.7",
         "node-gyp": "^5.0.2",
-        "socket.io": "^2.2.0"
+        "socket.io": "^2.4.0"
     },
     "devDependencies": {
         "nodemon": "1.18.10"
